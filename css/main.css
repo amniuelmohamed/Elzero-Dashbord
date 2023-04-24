@@ -44,6 +44,22 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
 .page {
     background-color: #f1f5f9;
     display: flex;
@@ -153,7 +169,7 @@ a {
     background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 15px 15px 15px 20px;
     align-items: center;
 }
 
@@ -222,3 +238,211 @@ a {
 }
 
 /* END Topbar */
+
+
+
+
+/* START Main Heading */
+h1.main-heading {
+    position: relative;
+    margin: 20px 20px 40px;
+}
+
+h1.main-heading::before,
+h1.main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+
+}
+
+h1.main-heading::before {
+    width: 120px;
+    background-color: white;
+}
+
+h1.main-heading::after {
+    width: 40px;
+    background-color: black;
+}
+
+/* END Main Heading */
+
+
+
+
+/* START Dashboard Content */
+.wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.wrapper>div,
+.projects {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.wrapper>div:not(:first-of-type),
+.projects {
+    padding: 20px;
+}
+
+.projects {
+    margin: 20px;
+}
+
+@media (max-width: 767px) {
+    .projects {
+        margin: 10px;
+    }
+}
+
+.welcome {
+    overflow: hidden;
+}
+
+.welcome .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.welcome .head .text span {
+    display: block;
+    margin: 5px 0 15px;
+    color: var(--grey-color);
+}
+
+.welcome .head .welcome-img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+.welcome .head .avatar {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ddd;
+}
+
+@media (max-width: 767px) {
+    .welcome .head .welcome-img {
+        display: none;
+    }
+
+    .welcome .head .avatar {
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+
+.welcome .infos {
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.welcome .infos>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .welcome .infos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .welcome .infos>div {
+        gap: 5px;
+    }
+}
+
+.welcome .infos>div span:last-child {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.widget-btn {
+    display: block;
+    background-color: var(--blue-color);
+    color: white;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 14px;
+    width: fit-content;
+    margin: 20px 20px 20px auto;
+    transition: background-color var(--main-transition)
+}
+
+.widget-btn:hover {
+    background-color: var(--blue-alt-color);
+}
+
+
+/* ============================================ */
+
+.quick-draft>p {
+    color: var(--grey-color);
+    margin: 10px 0 20px;
+    font-size: 15px;
+}
+
+.quick-draft form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quick-draft form input[type="text"],
+.quick-draft form textarea {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.quick-draft form textarea {
+    height: 180px;
+    resize: none;
+}
+
+.quick-draft form input[type="submit"] {
+    align-self: flex-end;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* END Dashboard Content */
