@@ -756,7 +756,9 @@ h1.main-heading::after {
     justify-content: space-between;
     align-items: center;
     color: var(--grey-color);
+    border-bottom: 1px solid var(--grey-color);
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .top-searched .item {
@@ -785,6 +787,7 @@ h1.main-heading::after {
 .latest-uploads .box {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .latest-uploads .box:not(:last-child) {
@@ -796,7 +799,6 @@ h1.main-heading::after {
 .latest-uploads .box>img {
     width: 40px;
     height: 40px;
-    margin-right: 15px;
 }
 
 .latest-uploads .box .infos {
@@ -816,4 +818,154 @@ h1.main-heading::after {
     font-size: 13px;
 }
 
+
+/* ============================================ */
+
+
+.project-progress {
+    position: relative
+}
+
+.project-progress>img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 160px;
+    opacity: .1;
+}
+
+.project-progress h2 {
+    margin-bottom: 20px;
+}
+
+.project-progress ul {
+    position: relative
+}
+
+.project-progress ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 11px;
+    height: 95%;
+    width: 2px;
+    background-color: var(--blue-color);
+}
+
+.project-progress ul li {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.project-progress ul li::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: white;
+    border: 2px solid white;
+    outline: 2px solid var(--blue-color);
+    z-index: 1
+}
+
+.project-progress ul li.finished::before {
+    background-color: var(--blue-color);
+}
+
+.project-progress ul li.in-progress::before {
+    animation: change-background .8s infinite alternate;
+}
+
+
+/* ============================================ */
+
+
+.reminders h2 {
+    margin-bottom: 20px;
+}
+
+.reminders .reminder {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reminders .reminder:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.reminders .reminder .circle {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.reminders .reminder:first-of-type .circle {
+    background-color: var(--blue-color);
+}
+
+.reminders .reminder:nth-of-type(2) .circle {
+    background-color: var(--green-color);
+}
+
+.reminders .reminder:nth-of-type(3) .circle {
+    background-color: var(--orange-color);
+}
+
+.reminders .reminder:last-of-type .circle {
+    background-color: var(--red-color);
+}
+
+.reminders .reminder .text {
+    padding-left: 15px;
+    border-left: 2px solid;
+}
+
+.reminders .reminder:first-of-type .text {
+    border-left-color: var(--blue-color);
+}
+
+.reminders .reminder:nth-of-type(2) .text {
+    border-left-color: var(--green-color);
+}
+
+.reminders .reminder:nth-of-type(3) .text {
+    border-left-color: var(--orange-color);
+}
+
+.reminders .reminder:last-of-type .text {
+    border-left-color: var(--red-color);
+}
+
+.reminders .reminder .text h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.reminders .reminder .text span {
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+
+/* ============================================ */
+
+
+
+
 /* END Dashboard Content */
+
+
+
+/* START Animations */
+@keyframes change-background {
+    to {
+        background-color: var(--blue-color);
+    }
+}
+
+/* END Animations */
