@@ -955,7 +955,132 @@ h1.main-heading::after {
 /* ============================================ */
 
 
+.latest-posts h2 {
+    margin-bottom: 20px;
+}
 
+.latest-posts .head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.latest-posts .head .avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.latest-posts .head .info {
+    flex: 1;
+}
+
+.latest-posts .head .info>span:first-of-type {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.latest-posts .head .info>span:last-of-type {
+    color: var(--grey-color);
+}
+
+.latest-posts .content {
+    padding: 20px 0;
+    margin: 20px 0;
+    border-top: 1px solid var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+    line-height: 1.8;
+}
+
+.latest-posts .interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grey-color);
+}
+
+
+/* ============================================ */
+
+
+.social-media-stats h2 {
+    margin-bottom: 20px;
+}
+
+.social-media-stats .box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-media-stats .box:first-of-type {
+    background-color: rgba(29, 160, 242, 0.2);
+    color: #1da1f2;
+}
+
+.social-media-stats .box:nth-of-type(2) {
+    background-color: rgba(24, 118, 242, 0.2);
+    color: #1877f2;
+}
+
+.social-media-stats .box:nth-of-type(3) {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+}
+
+.social-media-stats .box:last-of-type {
+    background-color: rgba(0, 118, 181, 0.2);
+    color: #0077b5;
+}
+
+.social-media-stats .box>i {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: var(--main-transition);
+}
+
+.social-media-stats .box>i:hover {
+    transform: rotate(6deg);
+}
+
+.social-media-stats .box:first-of-type>i,
+.social-media-stats .box:first-of-type>button {
+    background-color: #1da1f2;
+}
+
+.social-media-stats .box:nth-of-type(2)>i,
+.social-media-stats .box:nth-of-type(2)>button {
+    background-color: #1877f2;
+}
+
+.social-media-stats .box:nth-of-type(3)>i,
+.social-media-stats .box:nth-of-type(3)>button {
+    background-color: #ff0000;
+}
+
+.social-media-stats .box:last-of-type>i,
+.social-media-stats .box:last-of-type>button {
+    background-color: #0077b5;
+}
+
+.social-media-stats .box>span {
+    flex: 1;
+}
+
+.social-media-stats .box>button {
+    margin-right: 15px;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
 
 /* END Dashboard Content */
 
