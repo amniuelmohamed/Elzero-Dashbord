@@ -157,6 +157,7 @@ a {
 /* START Content Area */
 .content {
     flex: 1;
+    overflow: hidden;
 }
 
 /* END Content Area */
@@ -990,6 +991,14 @@ h1.main-heading::after {
     border-top: 1px solid var(--background-color);
     border-bottom: 1px solid var(--background-color);
     line-height: 1.8;
+    min-height: 140px;
+}
+
+@media (max-width: 767px) {
+    .latest-posts .content {
+        text-align: center;
+    }
+
 }
 
 .latest-posts .interaction {
@@ -1082,14 +1091,95 @@ h1.main-heading::after {
     cursor: pointer;
 }
 
+
+/* ============================================ */
+
+.projects h2 {
+    margin-bottom: 20px;
+}
+
+.projects .responsive-table {
+    overflow-x: auto;
+}
+
+.projects table {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    border-spacing: 0;
+    min-width: 1000px;
+}
+
+.projects table td {
+    padding: 15px;
+}
+
+.projects table thead td {
+    background-color: var(--background-color);
+    font-weight: bold;
+}
+
+.projects table tbody tr:hover td {
+    background-color: #faf7f7;
+}
+
+.projects table tbody td {
+    background-color: white;
+    border-left: 1px solid var(--background-color);
+    border-bottom: 1px solid var(--background-color);
+}
+
+.projects table tbody td:last-child {
+    border-right: 1px solid var(--background-color);
+}
+
+.projects table tbody td.team img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 2px;
+}
+
+.projects table tbody td.team img:not(:first-of-type) {
+    margin-left: -20px;
+}
+
+.projects table tbody td.status span {
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: white;
+    font-size: 13px;
+}
+
+.projects table tbody td.status span.pending {
+    background-color: var(--orange-color);
+}
+
+.projects table tbody td.status span.in-progress {
+    background-color: var(--blue-color);
+}
+
+.projects table tbody td.status span.completed {
+    background-color: var(--green-color);
+}
+
+.projects table tbody td.status span.rejected {
+    background-color: var(--red-color);
+}
+
 /* END Dashboard Content */
 
 
 
 /* START Animations */
 @keyframes change-background {
-    to {
+    from {
         background-color: var(--blue-color);
+    }
+
+    to {
+        background-color: white;
     }
 }
 
