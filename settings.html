@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome CSS File -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="sidebar">
+            <div class="logo">
+                Elzero
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class="fa-regular fa-chart-bar fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="active">
+                        <i class="fa-solid fa-gear fa-fw"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html">
+                        <i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="courses.html">
+                        <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="friends.html">
+                        <i class="fa-regular fa-circle-user fa-fw"></i>
+                        <span>Friends</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="files.html">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span>Files</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="plans.html">
+                        <i class="fa-regular fa-credit-card fa-fw"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="topbar">
+                <form action="">
+                    <input type="search" name="search" placeholder="Type A Keyword">
+                </form>
+                <div class="icons">
+                    <div class="notifications"><i class="fa-regular fa-bell"></i></div>
+                    <a href="profile.html"><img src="imgs/avatar.png" alt="profile_avatar"></a>
+                </div>
+            </div>
+            <h1 class="main-heading">Settings</h1>
+            <div class="wrapper">
+
+                <div class="site-control">
+                    <div class="widget-heading">
+                        <h2>Site Control</h2>
+                        <p>Control The Website If There Is Maintenance</p>
+                    </div>
+                    <div class="widget-body">
+                        <div class="text">
+                            <h3>Website Control</h3>
+                            <p>Open/Close Website And Type The Reason</p>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle-checkbox" checked>
+                            <label for="toggle-checkbox"></label>
+                        </div>
+                    </div>
+                    <textarea placeholder="Close Message Content"></textarea>
+                </div>
+
+                <div class="general-info">
+                    <div class="widget-heading">
+                        <h2>General Info</h2>
+                        <p>General Information About Your Account</p>
+                    </div>
+                    <div class="data-input">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="data-input">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="data-input">
+                        <label for="email">Email</label>
+                        <div>
+                            <input type="email" id="email" value="o@nn.sa" disabled>
+                            <button>Change</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-info">
+                    <div class="widget-heading">
+                        <h2>Security Info</h2>
+                        <p>Security Information About Your Account</p>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <span>Password</span>
+                            <span>Last Change On 25/10/2021</span>
+                        </div>
+                        <button>Change</button>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <span>Two-Factor Authentication</span>
+                            <span>Enable/Disable The Feature</span>
+                        </div>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="toggle-checkbox-2" checked>
+                            <label for="toggle-checkbox-2"></label>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <span>Devices</span>
+                            <span>Check The Login Devices List</span>
+                        </div>
+                        <button>Devices</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

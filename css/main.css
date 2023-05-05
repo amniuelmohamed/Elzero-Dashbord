@@ -70,6 +70,61 @@ a {
 
 
 
+/* START Components */
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch label {
+    display: block;
+    height: 32px;
+    width: 78px;
+    border-radius: 16px;
+    background-color: #ccc;
+    cursor: pointer;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.toggle-switch label::after {
+    content: "\f057";
+    font-family: "Font Awesome 6 Free";
+    font-weight: bold;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: #aaa;
+    border-radius: 50%;
+    transition: var(--main-transition);
+}
+
+.toggle-switch input[type="checkbox"]:checked+label {
+    background-color: var(--blue-color);
+}
+
+.toggle-switch input[type="checkbox"]:checked+label::after {
+    content: "\f058";
+    transform: translate(46px, -50%);
+    background-color: transparent
+}
+
+/* ========================================= */
+
+.widget-heading h2 {
+    margin-bottom: 10px;
+}
+
+.widget-heading p {
+    color: var(--grey-color);
+    font-size: 15px;
+}
+
+/* END Components */
+
+
 
 /* START Sidebar */
 .sidebar {
@@ -1169,6 +1224,143 @@ h1.main-heading::after {
 }
 
 /* END Dashboard Content */
+
+
+
+/* START Settings Content */
+.site-control {
+    padding: 20px;
+}
+
+.site-control .widget-body {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-control .widget-body .text h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.site-control .widget-body .text p {
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.site-control textarea {
+    resize: none;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 6px;
+    padding: 10px;
+    border-color: #ccc;
+}
+
+
+/* ============================================ */
+
+.general-info .widget-heading {
+    margin-bottom: 20px;
+}
+
+.general-info .data-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.general-info .data-input:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.general-info .data-input label {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.general-info .data-input input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.general-info .data-input:last-child>div {
+    display: flex;
+    align-items: center;
+}
+
+.general-info .data-input:last-child>div input {
+    flex: 1;
+    margin-right: 15px;
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+
+.general-info .data-input:last-child>div button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: var(--blue-color);
+    height: fit-content;
+    cursor: pointer;
+}
+
+
+/* ============================================ */
+
+.security-info .widget-heading {
+    margin-bottom: 20px;
+}
+
+.security-info .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.security-info .box:not(:last-of-type) {
+    border-bottom: 1px solid var(--background-color);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.security-info .box .text span:last-child {
+    font-size: 13px;
+    display: block;
+    color: var(--grey-color);
+    margin-top: 5px;
+}
+
+.security-info .box:nth-last-of-type(3)>button,
+.security-info .box:nth-last-of-type(1)>button {
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.security-info .box:nth-last-of-type(3)>button {
+    background-color: var(--blue-color);
+    color: white;
+    transition: var(--main-transition);
+}
+
+.security-info .box:nth-last-of-type(3)>button:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.security-info .box:nth-last-of-type(1)>button {
+    background-color: var(--background-color);
+}
+
+/* END Settings Content */
 
 
 
