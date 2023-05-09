@@ -338,8 +338,7 @@ h1.main-heading::after {
     .wrapper {
         grid-template-columns: minmax(200px, 1fr);
         gap: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 0 10px 10px
     }
 }
 
@@ -360,7 +359,7 @@ h1.main-heading::after {
 
 @media (max-width: 767px) {
     .projects {
-        margin: 10px;
+        margin: 0 10px 10px;
     }
 }
 
@@ -1524,7 +1523,17 @@ h1.main-heading::after {
 }
 
 .backup-manager .method>div {
-    flex: 1;
+    flex-basis: 33%;
+}
+
+@media (max-width: 767px) {
+    .backup-manager .method {
+        flex-direction: column;
+    }
+
+    .backup-manager .method>div {
+        flex-basis: 100%;
+    }
 }
 
 .backup-manager .method>div input {
@@ -1551,6 +1560,176 @@ h1.main-heading::after {
 }
 
 /* END Settings Content */
+
+
+
+/* START Profile Page */
+.profile-page {
+    margin: 0 10px 10px;
+}
+
+.profile-page>div {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.profile-page>div:not(:first-child) {
+    padding: 20px;
+}
+
+.profile-page>div:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    .profile-page {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "infos infos infos"
+            "skills l-act l-act";
+        gap: 20px;
+        margin: 0 20px 20px;
+    }
+
+    .profile-page>.infos {
+        grid-area: infos;
+    }
+
+    .profile-page>.skills {
+        grid-area: skills;
+    }
+
+    .profile-page>.latest-activities {
+        grid-area: l-act;
+    }
+
+    .profile-page>div:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+}
+
+.profile-page .toggle-switch label {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.profile-page .toggle-switch label::after {
+    left: 3px;
+    font-size: 14px;
+}
+
+.profile-page .toggle-switch input[type="checkbox"]:checked+label::after {
+    transform: translate(58px, -50%);
+}
+
+
+/* ============================================ */
+
+@media (min-width: 992px) {
+    .profile-page>.infos {
+        display: flex;
+    }
+}
+
+.profile-page>.infos>div:first-child {
+    padding: 20px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-page>.infos>div:first-child img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.profile-page>.infos>div:first-child .level {
+    margin: 10px 0 15px;
+    color: var(--grey-color);
+}
+
+.profile-page>.infos>div:first-child .prog-bar {
+    height: 6px;
+    width: 70%;
+    background-color: var(--background-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.profile-page>.infos>div:first-child .prog-bar span {
+    display: block;
+    background-color: var(--blue-color);
+    height: 100%;
+    border-radius: 6px;
+}
+
+.profile-page>.infos>div:first-child .stars {
+    margin: 10px 0;
+}
+
+.profile-page>.infos>div:first-child .stars i {
+    font-size: 13px;
+    color: var(--orange-color);
+}
+
+.profile-page>.infos>div:first-child .rating {
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.profile-page>.infos>div:last-child {
+    flex: 1;
+}
+
+.profile-page>.infos>div:last-child .box {
+    padding: 20px;
+}
+
+@media (min-width: 992px) {
+    .profile-page>.infos>div:last-child .box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .profile-page>.infos>div:last-child {
+        border-left: 1px solid var(--background-color);
+    }
+}
+
+.profile-page>.infos>div:last-child .box:not(:last-child) {
+    border-bottom: 1px solid var(--background-color);
+}
+
+.profile-page>.infos>div:last-child .box h4 {
+    width: 100%;
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--grey-color);
+}
+
+@media (max-width: 991px) {
+    .profile-page>.infos>div:last-child .box h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.profile-page>.infos>div:last-child .box>div {
+    min-width: 250px;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.profile-page>.infos>div:last-child .box>div:not(:last-child) span:first-child {
+    color: var(--grey-color);
+}
+
+/* END Profile Page */
 
 
 
