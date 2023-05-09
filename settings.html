@@ -186,28 +186,63 @@
                         <p>Show/Hide Widgets</p>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="q-draft" checked>
+                        <input type="checkbox" id="q-draft" name="widget" checked>
                         <label for="q-draft">Quick Draft</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="y-targets">
+                        <input type="checkbox" id="y-targets" name="widget" checked>
                         <label for="y-targets">Yearly Targets</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="t-statistics">
+                        <input type="checkbox" id="t-statistics" name="widget" checked>
                         <label for="t-statistics">Tickets Statistics</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="l-news" checked>
+                        <input type="checkbox" id="l-news" name="widget" checked>
                         <label for="l-news">Latest News</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="l-tasks">
+                        <input type="checkbox" id="l-tasks" name="widget">
                         <label for="l-tasks">Latest Tasks</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" id="t-search" checked>
+                        <input type="checkbox" id="t-search" name="widget" checked>
                         <label for="t-search">Top Search Items</label>
+                    </div>
+                </div>
+
+                <div class="backup-manager">
+                    <div class="widget-heading">
+                        <h2>Backup Manager</h2>
+                        <p>Control Backup Time And Location</p>
+                    </div>
+                    <div class="frequency">
+                        <div>
+                            <input type="radio" id="daily" name="frequency" value="daily" checked>
+                            <label for="daily">Daily</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="weekly" name="frequency" value="weekly">
+                            <label for="weekly">Weekly</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="monthly" name="frequency" value="monthly">
+                            <label for="monthly">Monthly</label>
+                        </div>
+                    </div>
+                    <div class="method">
+                        <div>
+                            <input type="radio" id="megaman" name="method" value="megaman">
+                            <label for="megaman"><i class="fa-solid fa-server"></i>Megaman</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="zero" name="method" value="zero" checked>
+                            <label for="zero"><i class="fa-solid fa-server"></i>Zero</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sigma" name="method" value="sigma">
+                            <label for="sigma"><i class="fa-solid fa-server"></i>Sigma</label>
+                        </div>
                     </div>
                 </div>
 

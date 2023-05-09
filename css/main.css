@@ -328,8 +328,7 @@ h1.main-heading::after {
 
 /* START Dashboard Content */
 .wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;
@@ -356,7 +355,7 @@ h1.main-heading::after {
 }
 
 .projects {
-    margin: 20px;
+    margin: 0 20px 20px;
 }
 
 @media (max-width: 767px) {
@@ -1440,7 +1439,7 @@ h1.main-heading::after {
     font-weight: 900;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg) scale(0);
+    transform: translateY(-50%) scale(0) rotate(365deg);
     left: 5px;
     width: 18px;
     height: 18px;
@@ -1451,13 +1450,104 @@ h1.main-heading::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform-origin: center center; */
     transition: var(--main-transition);
 }
 
 .widgets-control .box input:checked+label::after {
 
-    transform: translateY(-50%) rotate(0deg) scale(1);
+    transform: translateY(-50%) scale(1);
+}
+
+
+/* ============================================ */
+
+.backup-manager .widget-heading {
+    margin-bottom: 20px;
+}
+
+.backup-manager .frequency {
+    border-bottom: 1px solid var(--background-color);
+    padding-bottom: 20px;
+}
+
+.backup-manager .frequency>div:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.backup-manager .frequency>div input {
+    display: none;
+}
+
+.backup-manager .frequency>div label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+.backup-manager .frequency>div label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    border: 2px solid var(--grey-color);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.backup-manager .frequency>div input:checked+label::before {
+    border-color: var(--blue-color);
+}
+
+.backup-manager .frequency>div label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    transition: var(--main-transition);
+}
+
+.backup-manager .frequency>div input:checked+label::after {
+    transform: translateY(-50%) scale(1);
+}
+
+.backup-manager .method {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.backup-manager .method>div {
+    flex: 1;
+}
+
+.backup-manager .method>div input {
+    display: none;
+}
+
+.backup-manager .method>div label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid var(--background-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.backup-manager .method>div label i {
+    margin-bottom: 10px;
+}
+
+.backup-manager .method>div input:checked+label {
+    color: var(--blue-color);
+    border-color: var(--blue-color);
 }
 
 /* END Settings Content */
