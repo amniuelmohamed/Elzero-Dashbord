@@ -1584,8 +1584,6 @@ h1.main-heading::after {
 @media (min-width: 992px) {
     .profile-page {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
             "infos infos infos"
             "skills l-act l-act";
@@ -1728,6 +1726,83 @@ h1.main-heading::after {
 .profile-page>.infos>div:last-child .box>div:not(:last-child) span:first-child {
     color: var(--grey-color);
 }
+
+
+/* ============================================ */
+
+.profile-page>.skills .widget-heading {
+    margin-bottom: 20px;
+}
+
+.profile-page>.skills .group {
+    padding: 15px 0;
+}
+
+.profile-page>.skills .group:not(:last-of-type) {
+    border-bottom: 1px solid var(--background-color);
+}
+
+.profile-page>.skills .group>span {
+    display: inline-block;
+    background-color: var(--background-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+/* ============================================ */
+
+.profile-page>.latest-activities .box {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .profile-page>.latest-activities .box {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+.profile-page>.latest-activities .box:not(:last-of-type) {
+    border-bottom: 1px solid var(--background-color);
+}
+
+.profile-page>.latest-activities .box img {
+    width: 64px;
+    height: 64px;
+}
+
+.profile-page>.latest-activities .box .description {
+    flex: 1;
+}
+
+.profile-page>.latest-activities .box .description span:last-child,
+.profile-page>.latest-activities .box .time span:last-child {
+    display: block;
+    color: var(--grey-color);
+    margin-top: 10px;
+}
+
+.profile-page>.latest-activities .box .time {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .profile-page>.latest-activities .box .time {
+        display: flex;
+        gap: 20px;
+    }
+
+    .profile-page>.latest-activities .box .time span:last-child {
+        margin-top: 0;
+    }
+}
+
 
 /* END Profile Page */
 
