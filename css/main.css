@@ -2155,6 +2155,190 @@ h1.main-heading::after {
 
 
 
+/* START Files Page */
+.files-page {
+    margin: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.files-page .files {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .files-page {
+        margin: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .files-page .files {
+        order: 2;
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+    }
+}
+
+.files-page .files .file {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.files-page .file>i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--grey-color);
+}
+
+.files-page .file>img {
+    width: 64px;
+    margin: 15px 0;
+    transition: var(--main-transition);
+}
+
+.files-page .file:hover>img {
+    transform: rotate(5deg);
+}
+
+.files-page .file .name {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.files-page .file .creator {
+    align-self: flex-start;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.files-page .file .info {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--background-color);
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.files-page .files-stats {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 260px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .files-page .files-stats {
+        width: 100%;
+    }
+}
+
+.files-page .files-stats h2 {
+    margin-bottom: 15px;
+}
+
+.files-page .files-stats .box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--background-color);
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.files-page .files-stats .box>i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-color);
+}
+
+.files-page .files-stats .box>i.blue {
+    background-color: rgb(0 117 255 / 20%);
+    color: var(--blue-color);
+}
+
+.files-page .files-stats .box>i.green {
+    background-color: rgb(34 197 94 / 20%);
+    color: var(--green-color);
+}
+
+.files-page .files-stats .box>i.red {
+    background-color: rgb(244 67 54 / 20%);
+    color: var(--red-color);
+}
+
+.files-page .files-stats .box>i.orange {
+    background-color: rgb(245 159 10 / 20%);
+    color: var(--orange-color);
+}
+
+.files-page .files-stats .box .counter {
+    flex: 1;
+    font-size: 13px;
+}
+
+.files-page .files-stats .box .counter span:last-of-type {
+    display: block;
+    color: var(--grey-color);
+    margin-top: 5px;
+}
+
+.files-page .files-stats .box .space {
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.files-page a.upload {
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 13px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    transition: var(--main-transition);
+}
+
+.files-page a.upload::before {
+    content: "\f102";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    position: relative
+}
+
+.files-page a.upload:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.files-page a.upload:hover::before {
+    animation: bouncing .8s linear infinite;
+}
+
+/* END Files Page */
+
+
+
+
 /* START Animations */
 @keyframes change-background {
     from {
@@ -2163,6 +2347,18 @@ h1.main-heading::after {
 
     to {
         background-color: white;
+    }
+}
+
+@keyframes bouncing {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: -5px;
     }
 }
 
