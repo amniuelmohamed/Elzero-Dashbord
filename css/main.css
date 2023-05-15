@@ -2339,6 +2339,133 @@ h1.main-heading::after {
 
 
 
+/* START Plans Page */
+.plans-page {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .plans-page {
+        grid-template-columns: minmax(200px, 1fr);
+        gap: 10px;
+        margin: 10px
+    }
+}
+
+.plans-page .plan {
+    background-color: white;
+    padding: 20px;
+}
+
+.plans-page .plan .head {
+    color: white;
+    padding: 20px;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.plans-page .plan .head.green {
+    background-color: var(--green-color);
+    outline: 3px solid var(--green-color);
+}
+
+.plans-page .plan .head.blue {
+    background-color: var(--blue-color);
+    outline: 3px solid var(--blue-color);
+}
+
+.plans-page .plan .head.orange {
+    background-color: var(--orange-color);
+    outline: 3px solid var(--orange-color);
+}
+
+
+.plans-page .plan .head>span {
+    position: relative;
+    font-size: 40px;
+}
+
+.plans-page .plan .head>span::before {
+    content: "\24";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    font-size: 20px;
+    left: -17px;
+    top: 8px;
+}
+
+.plans-page .plan .features {
+    margin: 15px 0;
+}
+
+.plans-page .plan .features .feature {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--background-color);
+}
+
+.plans-page .plan .features .feature>i:first-of-type {
+    font-size: 18px;
+}
+
+.plans-page .plan .features .feature>i:first-of-type.checked {
+    color: var(--green-color);
+}
+
+.plans-page .plan .features .feature>i:first-of-type.unchecked {
+    color: var(--red-color);
+}
+
+.plans-page .plan .features .feature p {
+    flex: 1;
+    font-size: 15px;
+}
+
+.plans-page .plan .features .feature>i:last-of-type {
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--grey-color);
+}
+
+.plans-page .plan:not(.chosen) a.join {
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.plans-page .plan a.join.green {
+    background-color: var(--green-color);
+}
+
+.plans-page .plan a.join.blue {
+    background-color: var(--blue-color);
+}
+
+.plans-page .plan a.join.orange {
+    background-color: var(--orange-color);
+}
+
+.plans-page .plan.chosen>p.joined {
+    color: var(--grey-color);
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* END Plans Page */
+
+
+
 /* START Animations */
 @keyframes change-background {
     from {
